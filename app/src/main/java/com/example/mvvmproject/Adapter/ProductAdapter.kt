@@ -1,5 +1,6 @@
 package com.example.mvvmproject.Adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -23,6 +24,7 @@ class ProductAdapter(private val myContext: Context, private val productList: Ar
        return ProductViewHolder(myView)
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val product=productList[position]
         Glide.with(myContext).load(product.image).into(holder.imageView)
@@ -36,6 +38,7 @@ class ProductAdapter(private val myContext: Context, private val productList: Ar
             intent.putExtra("name",product.name)
             intent.putExtra("price",product.price)
             intent.putExtra("description",product.description)
+            intent.putExtra("id",product.id)
             myContext.startActivity(intent)
         }
     }
