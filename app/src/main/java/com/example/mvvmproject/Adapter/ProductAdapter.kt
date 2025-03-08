@@ -1,6 +1,7 @@
 package com.example.mvvmproject.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.mvvmproject.DataModel.ProductModel
+import com.example.mvvmproject.ProductDetailsActivity
 import com.example.mvvmproject.R
 
 class ProductAdapter(private val myContext: Context, private val productList: ArrayList<ProductModel>):RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
@@ -27,6 +29,14 @@ class ProductAdapter(private val myContext: Context, private val productList: Ar
         holder.textName.text=product.name
         holder.priceName.text=product.name
         holder.descriptionName.text=product.price
+
+        holder.itemView.setOnClickListener {
+         val intent=Intent(myContext,ProductDetailsActivity::class.java)
+            intent.putExtra("image",product.image)
+            intent.putExtra("name",product.name)
+            intent.putExtra("price",product.price)
+            intent.putExtra("description",product.description)
+        }
     }
 
     override fun getItemCount(): Int {
