@@ -36,6 +36,7 @@ class ProductAdapter(private val myContext: Context, private val productList: Ar
             intent.putExtra("name",product.name)
             intent.putExtra("price",product.price)
             intent.putExtra("description",product.description)
+            myContext.startActivity(intent)
         }
     }
 
