@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="healthTextColor">#0F7986</color>
+    <color name="healthTextColor1">#1f41bb</color>
+    <color name="backgroundColor1">#f8f9ff</color>
+    <color name="backgroundColor2">#f1f4ff</color>
+    <color name="backgroundColor3">#1f41bb</color>
+</resources>
