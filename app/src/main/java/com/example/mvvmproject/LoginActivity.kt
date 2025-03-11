@@ -10,7 +10,7 @@ import com.example.mvvmproject.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    lateinit var userViewModel: AuthViewModel
+    private lateinit var userViewModel: AuthViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityLoginBinding.inflate(layoutInflater)

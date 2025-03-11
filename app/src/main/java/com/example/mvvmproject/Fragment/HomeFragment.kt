@@ -1,4 +1,4 @@
-package com.example.mvvmproject
+package com.example.mvvmproject.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmproject.Adapter.ProductAdapter
 import com.example.mvvmproject.AllViewModel.ProductViewModel
 import com.example.mvvmproject.DataModel.ProductModel
+import com.example.mvvmproject.R
 
 class HomeFragment : Fragment() {
     private lateinit var productRecyclerVie:RecyclerView

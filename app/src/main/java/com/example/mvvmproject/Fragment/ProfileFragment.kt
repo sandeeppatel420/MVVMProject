@@ -1,4 +1,4 @@
-package com.example.mvvmproject
+package com.example.mvvmproject.Fragment
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -14,6 +14,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.mvvmproject.AllViewModel.AuthViewModel
 import com.example.mvvmproject.AllViewModel.GetUserDataViewModel
+import com.example.mvvmproject.LoginActivity
+import com.example.mvvmproject.R
 import com.example.mvvmproject.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -54,7 +56,7 @@ class ProfileFragment : Fragment() {
         dialog.setMessage("Are you sure you want to logout?")
         dialog.setPositiveButton("Logout"){ b ,_->
             FirebaseAuth.getInstance().signOut()
-            val intent= Intent(requireContext(),LoginActivity::class.java)
+            val intent= Intent(requireContext(), LoginActivity::class.java)
             startActivity(intent)
             activity?.finish()
             b.dismiss()
@@ -71,9 +73,13 @@ class ProfileFragment : Fragment() {
 
 
         val positiveButton = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE)
-        positiveButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.healthTextColor))
+        positiveButton.setTextColor(ContextCompat.getColor(requireContext(),
+            R.color.healthTextColor
+        ))
 
         val negativeButton=alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE)
-        negativeButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.healthTextColor))
+        negativeButton.setTextColor(ContextCompat.getColor(requireContext(),
+            R.color.healthTextColor
+        ))
     }
 }

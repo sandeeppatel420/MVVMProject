@@ -43,11 +43,7 @@ class ProductDetailsActivity : AppCompatActivity() {
 
         db.getReference("AddToCard").child(id).setValue(data)
             .addOnSuccessListener {
-                val fragment = AddToCartFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.frameLayout_container, fragment) // 👈 fragment_container ko apne layout ke hisaab se replace karo
-                    .addToBackStack(null)  // 👈 BackStack me add karo
-                    .commit()
+                Toast.makeText(this, "add", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show()
