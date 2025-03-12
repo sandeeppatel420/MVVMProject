@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.mvvmproject.databinding.ActivityProductDetailsBinding
 import com.google.firebase.database.FirebaseDatabase
 
-class ProductDetailsActivity : AppCompatActivity() {
+class ProductDetailsActivity : AppCompatActivity(){
     private lateinit var binding:ActivityProductDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding=ActivityProductDetailsBinding.inflate(layoutInflater)
@@ -49,5 +49,6 @@ class ProductDetailsActivity : AppCompatActivity() {
                 Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show()
             }
     }
+
 
 }

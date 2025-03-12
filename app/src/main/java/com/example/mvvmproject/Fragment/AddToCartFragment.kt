@@ -11,13 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmproject.Adapter.AddtoCardAdapter
 import com.example.mvvmproject.AllViewModel.AddTocardViewModel
+import com.example.mvvmproject.DataModel.AddToCartModel
 import com.example.mvvmproject.DataModel.ProductModel
 import com.example.mvvmproject.R
 
 
 class AddToCartFragment : Fragment() {
     private lateinit var cartRecyclerVie: RecyclerView
-    private lateinit var dataList:ArrayList<ProductModel>
+    private lateinit var dataList:ArrayList<AddToCartModel>
     private lateinit var productAdapter:AddtoCardAdapter
     private lateinit var viewModel: AddTocardViewModel
 

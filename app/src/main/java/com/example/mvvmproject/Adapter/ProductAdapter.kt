@@ -47,9 +47,9 @@ class ProductAdapter(private val myContext: Context, private val productList: Ar
         return productList.size
     }
     class ProductViewHolder(itemView: View):ViewHolder(itemView){
-       val imageView =itemView.findViewById<ImageView>(R.id.image_ImageView)
-       val priceName=itemView.findViewById<TextView>(R.id.price_TextView)
-       val textName=itemView.findViewById<TextView>(R.id.name_TextView)
-       val descriptionName=itemView.findViewById<TextView>(R.id.description_TextView)
+       val imageView =itemView.findViewById<ImageView>(R.id.image_ImageView)!!
+       val priceName=itemView.findViewById<TextView>(R.id.price_TextView)!!
+       val textName=itemView.findViewById<TextView>(R.id.name_TextView)!!
+       val descriptionName=itemView.findViewById<TextView>(R.id.description_TextView)!!
     }
 }

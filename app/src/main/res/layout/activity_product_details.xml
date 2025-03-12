@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ProductDetailsActivity">
-   <androidx.cardview.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="200dp"
-       android:layout_marginHorizontal="10dp"
-       android:layout_marginTop="10dp"
-     >
-       <ImageView
-           android:id="@+id/image_details"
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           />
-   </androidx.cardview.widget.CardView>
-   <TextView
-       android:id="@+id/name_details"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="name"/>
-    <TextView
-        android:id="@+id/price_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="name"/>
-    <TextView
-        android:id="@+id/description_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="name"/>
 
-    <Button
-        android:id="@+id/addToCardBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="add"
-        />
-</LinearLayout>
+  <LinearLayout
+      android:id="@+id/linear_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginHorizontal="10dp"
+          android:layout_marginTop="10dp"
+          >
+          <ImageView
+              android:id="@+id/image_details"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              />
+      </androidx.cardview.widget.CardView>
+      <TextView
+          android:id="@+id/name_details"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="name"/>
+      <TextView
+          android:id="@+id/price_details"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="name"/>
+      <TextView
+          android:id="@+id/description_details"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="name"/>
+
+      <Button
+          android:id="@+id/addToCardBtn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="add"
+          />
+  </LinearLayout>
+</RelativeLayout>

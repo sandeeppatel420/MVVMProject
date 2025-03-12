@@ -1,21 +1,18 @@
 package com.example.mvvmproject.Adapter
 
-import android.app.AlertDialog
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.example.mvvmproject.DataModel.ProductModel
+import com.example.mvvmproject.DataModel.AddToCartModel
 import com.example.mvvmproject.R
-import com.google.firebase.database.FirebaseDatabase
 
-class AddtoCardAdapter(private val myContext: Context, private val addList: ArrayList<ProductModel>):RecyclerView.Adapter<AddtoCardAdapter.AddtoCardViewHolde>() {
+class AddtoCardAdapter(private val myContext: Context, private val addList: ArrayList<AddToCartModel>,private val listener: DeleteCartItem):RecyclerView.Adapter<AddtoCardAdapter.AddtoCardViewHolde>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -32,7 +29,7 @@ class AddtoCardAdapter(private val myContext: Context, private val addList: Arra
         holder.descriptionName.text=addlist1.price
 
         holder.deleteItem.setOnClickListener {
-//            deleteData(position,addlist1.id!!)
+
         }
     }
 
@@ -45,6 +42,10 @@ class AddtoCardAdapter(private val myContext: Context, private val addList: Arra
         val textName= itemView.findViewById<TextView>(R.id.name_TextView1)!!
         val descriptionName=itemView.findViewById<TextView>(R.id.description_TextView1)!!
         val deleteItem=itemView.findViewById<ImageView>(R.id.deleteItem)!!
+    }
+
+    interface DeleteCartItem {
+    fun deleteItem(position: Int,data:AddToCartModel)
     }
 
 
