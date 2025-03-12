@@ -29,7 +29,7 @@ class AddtoCardAdapter(private val myContext: Context, private val addList: Arra
         holder.descriptionName.text=addlist1.price
 
         holder.deleteItem.setOnClickListener {
-
+          listener.deleteItem(position,addlist1)
         }
     }
 
@@ -48,29 +48,4 @@ class AddtoCardAdapter(private val myContext: Context, private val addList: Arra
     fun deleteItem(position: Int,data:AddToCartModel)
     }
 
-
-//    private fun deleteData(position: Int, userId:String){
-//        val dialog= AlertDialog.Builder(myContext)
-//        dialog.setTitle("Alert")
-//        dialog.setMessage("Do you want to delete")
-//
-//        dialog.setPositiveButton("yes"){a,_->
-//            val db= FirebaseDatabase.getInstance()
-//            db.getReference("AddToCard").child(userId).removeValue()
-//                .addOnSuccessListener {
-//                    addList.removeAt(position)
-//                    notifyDataSetChanged()
-//                    Toast.makeText(myContext, "Delete", Toast.LENGTH_SHORT).show()
-//                }
-//                .addOnFailureListener {
-//                    Toast.makeText(myContext, "Failed", Toast.LENGTH_SHORT).show()
-//                }
-//            a.dismiss()
-//        }
-//        dialog.setNegativeButton("No"){ b,_->
-//            b.cancel()
-//        }
-//        dialog.setCancelable(false)
-//        dialog.show()
-//    }
 }
